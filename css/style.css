@@ -1,0 +1,54 @@
+body{
+    background-image: url(/images/20.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:auto;
+    margin: 0;
+    padding: 0;
+}
+ 
+.rain{
+    background-image: url(/images/rain2.png);
+    height:643px;
+    animation: rain 1s linear infinite
+}
+ 
+.rain::before {
+    content: "";
+    position: absolute;
+    background:#fff;
+    background-size: cover;
+    width:1366px;
+    height:643px;
+    animation: ligth 4s linear infinite;
+    animation-delay: 5s;
+    opacity: 0;
+}
+ 
+ 
+
+@keyframes rain {
+    0%{
+       background-position: 0% 0%;
+    }
+    100%{
+       background-position: -100% -100%;
+    }
+}
+@keyframes ligth {
+  14%{
+    opacity: 1;
+  }
+  20%{
+    opacity: 0;
+  }
+  21%{
+    opacity: 1;
+  }
+  24%{
+    opacity: 0;
+  }
+  104%{
+    opacity: 0
+  }
+}
